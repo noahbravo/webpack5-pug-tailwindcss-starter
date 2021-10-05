@@ -71,7 +71,7 @@ module.exports = {
       },
 
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.css$/i,
         use: [
           'style-loader',
           {
@@ -86,8 +86,7 @@ module.exports = {
               url: false
             }
           },
-          'postcss-loader',
-          'sass-loader'
+          'postcss-loader'
         ]
       },
 

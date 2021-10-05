@@ -1,19 +1,19 @@
 
-.terminal
-  .terminal__command-list
-    .terminal__command
-      strong.terminal__command-blue eterm##$: BKUW300PS345672:
-      span.terminal__command-white fsociety00.dat  readme.txt
+.flex.relative.h-full.w-full
+  .absolute
+    .relative.z-20
+      strong.mr-2.text-accent-color eterm##$: BKUW300PS345672:
+      span fsociety00.dat  readme.txt
 
-    .terminal__command
-      strong.terminal__command-blue eterm##$: BKUW300PS345672:
-      span.terminal__command-white more readme.txt
+    .relative.z-20
+      strong.mr-2.text-accent-color eterm##$: BKUW300PS345672:
+      span more readme.txt
 
-    .terminal__readme
-      span.terminal__readme-title ------readme.txt------
-      strong.terminal__readme-comment leave me here
-      span.terminal__readme-title ------readme.txt------
+    .inline-flex.flex-col.relative.z-10.mt-5.inset-0
+      span.flex ------readme.txt------
+      strong.flex.self-center.capitalize leave me here
+      span.flex ------readme.txt------
 
-  .terminal__image-container
-    img(src="./images/fsociety_logo.svg", width="250").terminal__image
-    .terminal__image-text hello friend.
+  .flex.flex-col.justify-center.m-auto.absolute.z-10.-inset-0
+    img(src="./images/fsociety_logo.svg", width="250").flex.m-auto
+    .w-full.text-center.mt-5 hello friend.

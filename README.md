@@ -1,9 +1,9 @@
-## Webpack 5 configuration for Single or Multipage websites using Pug, Sass, PostCSS, Babel and Browsersync.
+## Webpack 5 configuration for Single or Multipage websites using Pug, Tailwind CSS, PostCSS, Babel and Browsersync.
 
 **Features:**
 
 - Webpack 5
-- Sass
+- Tailwind CSS
 - Pug
 - PostCSS
 - Babel

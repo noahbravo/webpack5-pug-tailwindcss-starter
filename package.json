@@ -1,7 +1,7 @@
 {
-  "name": "webpack5-pug-sass-starter",
+  "name": "webpack5-pug-tailwindcss-starter",
   "version": "1.0.0",
-  "description": "Webpack 5 configuration for Single or Multipage websites using Pug, Sass, PostCSS, Babel and Browsersync",
+  "description": "Webpack 5 configuration for Single or Multipage websites using Pug, Tailwind CSS, PostCSS, Babel and Browsersync",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
@@ -14,9 +14,9 @@
     "webpack",
     "webpack 5",
     "webpack multipage",
-    "webpack sass",
+    "webpack tailwindcss",
     "webpack pug",
-    "sass",
+    "tailwindcss",
     "pug"
   ],
   "author": "Elena Bravo",
@@ -54,21 +54,18 @@
     "husky": "7.0.2",
     "mini-css-extract-plugin": "2.3.0",
     "node-sass": "6.0.1",
-    "normalize.css": "8.0.1",
     "popper.js": "1.16.1",
     "postcss": "8.3.8",
     "postcss-loader": "6.1.1",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "2.4.1",
     "pug": "3.0.2",
     "pug-html-loader": "1.1.5",
     "raw-loader": "4.0.2",
     "replace-ext": "2.0.0",
-    "sass": "1.42.1",
-    "sass-loader": "12.1.0",
-    "sass-rem": "3.0.0",
     "style-loader": "3.3.0",
     "stylelint": "13.13.1",
-    "stylelint-config-sass-guidelines": "8.0.0",
+    "tailwindcss": "^2.2.16",
     "terser-webpack-plugin": "5.2.4",
     "typescript": "4.4.3",
     "webpack": "5.56.0",
@@ -78,7 +75,7 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/elenabravo/webpack5-pug-sass-starter"
+    "url": "https://github.com/elenabravo/webpack5-pug-tailwindcss-starter"
   },
   "husky": {
     "hooks": {
