@@ -23,7 +23,6 @@ body {
 body {
   background: var(--bg-color);
   color: var(--primary-color);
-  font-family: 'FSEX300', sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }

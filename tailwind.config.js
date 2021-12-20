@@ -9,6 +9,9 @@ module.exports = {
         'accent-color': 'var(--accent-color)',
         'color-color': 'var(--bg-color)'
       }
+    },
+    fontFamily: {
+      sans: ['FSEX300', 'sans-serif']
     }
   },
   variants: {
