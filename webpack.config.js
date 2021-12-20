@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserJSPlugin = require('terser-webpack-plugin')
@@ -9,10 +10,11 @@ const CopyPlugin = require('copy-webpack-plugin')
 const replaceExt = require('replace-ext')
 const projectConfig = require('./project.config')
 
-const { srcPath, buildPath, templatePath, templateFiles } = projectConfig
+const { srcPath, buildPath, templatePath } = projectConfig
+const templateFiles = fs.readdirSync(path.resolve(__dirname, templatePath))
 
 const htmlPlugins = templateFiles.reduce((acc, templateFile, index) => {
-  const templateFilePath = `${templatePath}/${templateFile}.pug`
+  const templateFilePath = `${templatePath}/${templateFile}`
   acc.push(
     new HtmlWebpackPlugin({
       template: templateFilePath,
