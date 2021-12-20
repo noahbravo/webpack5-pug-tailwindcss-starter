@@ -1,10 +1,10 @@
-//	Typography
+/* Typography */
 strong {
   font-weight: normal
 }
 
 
-// Basic Styles
+/* Base Styles */
 html {
   box-sizing: border-box;
 }
