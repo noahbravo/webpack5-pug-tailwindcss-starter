@@ -1,6 +1,5 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./src/**/*.{pug,js}'],
   theme: {
     extend: {
       colors: {
@@ -13,9 +12,6 @@ module.exports = {
     fontFamily: {
       sans: ['FSEX300', 'sans-serif']
     }
-  },
-  variants: {
-    extend: {}
   },
   plugins: []
 }
