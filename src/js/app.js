@@ -1,4 +1,15 @@
 import '../css/global.css'
-import '../images/fsociety_logo.svg'
+import { onDocumentReady, importAll } from './functions.js'
 
-console.log('hello friend.')
+// import all media from ./src/assets
+importAll(
+  require.context(
+    '../assets/images',
+    false,
+    /\.(png|jpe?g|svg|gif|mov|mp4|ico|xml|webmanifest)$/
+  )
+)
+
+onDocumentReady(function () {
+  console.log('hello friend.')
+})
