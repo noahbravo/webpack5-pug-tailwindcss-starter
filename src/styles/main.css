@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-color: var(--primary-color);
+  --color-text-color: var(--text-color);
+  --color-accent-color: var(--accent-color);
+  --color-bg-color: var(--bg-color);
+
+  --font-sans: "FSEX300", sans-serif;
+}
+
+@import "./0-tools/+";
+@import "./1-base/+";

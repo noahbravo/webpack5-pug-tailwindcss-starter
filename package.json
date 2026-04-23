@@ -1,80 +1,74 @@
 {
-  "name": "webpack5-pug-tailwindcss-starter",
+  "name": "vite-pug-tailwind-starter",
+  "private": true,
   "version": "1.0.0",
-  "description": "Webpack 5 configuration for Single or Multipage websites using Pug, Tailwind CSS, PostCSS, Babel and Browsersync",
+  "description": "Vite starter for multi-page Pug + Tailwind CSS + JavaScript sites with testing, linting and Husky pre-commit hooks.",
+  "type": "module",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack serve --mode development",
-    "build": "cross-env NODE_ENV=production webpack --mode production",
-    "lint": "eslint --ext .js ./src/js",
-    "lint:fix": "eslint --ext .js --fix ./src/js",
-    "stylelint": "stylelint ./src/css/**/*.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest --run",
+    "test:watch": "vitest --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:css:fix": "stylelint \"src/**/*.css\" --fix",
+    "prepare": "husky"
   },
   "keywords": [
-    "webpack",
-    "webpack 5",
-    "webpack multipage",
-    "webpack tailwindcss",
-    "webpack pug",
-    "tailwindcss",
-    "pug"
+    "vite",
+    "pug",
+    "css",
+    "tailwind",
+    "javascript",
+    "multipage",
+    "starter",
+    "frontend",
+    "boilerplate"
   ],
-  "author": "Elena Bravo",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "7.23.6",
-    "@babel/eslint-parser": "7.23.3",
-    "@babel/plugin-proposal-class-properties": "7.18.6",
-    "@babel/plugin-proposal-object-rest-spread": "7.20.7",
-    "@babel/preset-env": "7.23.6",
-    "autoprefixer": "10.4.16",
-    "babel-eslint": "10.1.0",
-    "babel-loader": "9.1.3",
-    "babel-preset-env": "1.7.0",
-    "browser-sync": "2.29.3",
-    "browser-sync-webpack-plugin": "2.3.0",
-    "bufferutil": "4.0.8",
-    "copy-webpack-plugin": "11.0.0",
-    "cross-env": "7.0.3",
-    "css-loader": "6.8.1",
-    "css-minimizer-webpack-plugin": "5.0.1",
-    "eslint": "8.56.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-config-standard": "17.1.0",
-    "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "5.0.1",
-    "eslint-plugin-promise": "6.1.1",
-    "eslint-webpack-plugin": "4.0.1",
-    "file-loader": "6.2.0",
-    "html-webpack-plugin": "5.6.0",
-    "husky": "8.0.3",
-    "mini-css-extract-plugin": "2.7.6",
-    "popper.js": "1.16.1",
-    "postcss": "8.4.32",
-    "postcss-loader": "7.3.3",
-    "postcss-preset-env": "9.3.0",
-    "prettier": "3.1.1",
-    "pug": "3.0.2",
-    "pug-plugin": "4.9.9",
-    "raw-loader": "4.0.2",
-    "replace-ext": "2.0.0",
-    "stylelint": "15.11.0",
-    "stylelint-config-standard": "34.0.0",
-    "tailwindcss": "3.4.0",
-    "terser-webpack-plugin": "5.3.9",
-    "typescript": "5.3.3",
-    "webpack": "5.89.0",
-    "webpack-cli": "5.1.4",
-    "webpack-dev-server": "4.15.1"
-  },
+  "author": "Noah Bravo",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/elenabravo/webpack5-pug-tailwindcss-starter"
+    "url": "https://github.com/noahbravo/vite-pug-tailwind-starter.git"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run stylelint"
-    }
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@tailwindcss/vite": "^4.2.3",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/user-event": "^14.6.1",
+    "@vituum/vite-plugin-pug": "^2.0.1",
+    "eslint": "^9.39.1",
+    "eslint-import-resolver-node": "^0.3.10",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-n": "^17.24.0",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-promise": "^7.2.1",
+    "globals": "^17.5.0",
+    "husky": "^9.1.7",
+    "jsdom": "^29.0.2",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.3",
+    "rollup-plugin-visualizer": "^7.0.1",
+    "stylelint": "^17.8.0",
+    "tailwindcss": "^4.2.3",
+    "vite": "^8.0.9",
+    "vitest": "^4.1.4",
+    "vituum": "^2.0.1"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "src/**/*.css": [
+      "stylelint",
+      "prettier --write"
+    ]
   }
 }
